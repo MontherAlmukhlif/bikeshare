@@ -15,5 +15,5 @@ new_york_city.csv
 Washington.csv
 
 ### Credits
-Based on udacity data science nanodegree project
+Based on udacity programming for data science nanodegree project
 
