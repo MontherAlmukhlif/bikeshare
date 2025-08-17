@@ -97,12 +97,12 @@ def time_stats(df):
               'july', 'august', 'september', 'october', 'november', 'december']
 
         if not df['month'].empty:
-            most_common_month_num = df['month'].mode()[0]
+            most_common_month_num = df['month'].mode().iloc[0]
             most_common_month = months[most_common_month_num - 1]  
             print("The most common month is: " + most_common_month)
 
         if not df['day_week'].empty:
-            most_common_day = df['day_week'].mode()[0]
+            most_common_day = df['day_week'].mode().iloc[0]
             print("the most common day is: " + most_common_day)
 
         if not df['hours'].empty:
