@@ -123,15 +123,15 @@ def station_stats(df):
         print("No data for the selected filters.")
     else:
         if 'Start Station' in df and not df['Start Station'].empty:
-            print('The most commonly used start station',df['Start Station'].mode()[0])
+            print('The most commonly used start station is: ',df['Start Station'].mode()[0])
 
         if 'End Station' in df and not df['End Station'].empty:
-            print('The most commonly used end station',df['End Station'].mode()[0])
+            print('The most commonly used end station is: ',df['End Station'].mode()[0])
 
         if 'Start Station' in df and 'End Station' in df:
             df['Station combination'] = df['Start Station'] + '-->' + df['End Station']
             if not df['Station combination'].empty:
-                print('The most frequent combination of start & end station trip:' , df['Station combination'].mode()[0])
+                print('The most frequent combination of start & end station trip is:' , df['Station combination'].mode()[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -144,7 +144,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     if len(df) == 0 or 'Trip Duration' not in df:
-        print("No trip duration data available.")
+        print("No trip duration data available!")
     else:
         totat_time = df["Trip Duration"].sum()
         print('Total travel time is',totat_time, 'seconds')
