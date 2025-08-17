@@ -12,7 +12,7 @@ It uses Python to calculate statistics such as most popular times of travel, sta
 ### Files used
 chicago.csv
 new_york_city.csv
-Washington.csv
+washington.csv
 
 ### Credits
 Based on udacity programming for data science nanodegree project
